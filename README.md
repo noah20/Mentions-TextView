@@ -4,6 +4,11 @@
 
 Make Mentions and hashtags clickable in Textview
 
+## Screenshots
+
+![App Screenshot](https://i2.paste.pics/3ef00e229665a20025c5f7add8bd202f.png?trs=0e0a9d8b27f1e5c927184a23d130a717d31fec49db2c5d8dc4a692aeab825c69)
+
+
 ## Download
 Add it in your root build.gradle at the end of repositories:
 may be you need to add maven to settings.gradle file
