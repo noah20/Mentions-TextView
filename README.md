@@ -4,9 +4,7 @@
 
 Make Mentions and hashtags clickable in Textview
 
-## Screenshots
 
-![App Screenshot](https://i2.paste.pics/3ef00e229665a20025c5f7add8bd202f.png?trs=0e0a9d8b27f1e5c927184a23d130a717d31fec49db2c5d8dc4a692aeab825c69)
 
 
 ## Download
@@ -68,3 +66,7 @@ also you can update textview attr by code like
             holder.binding.socialTextView.boldMentionText = true
             holder.binding.socialTextView.boldHashText = true
             holder.binding.socialTextView.type = SocialTextView.FLAG_HASH
+
+## Screenshots
+
+![App Screenshot](https://i2.paste.pics/3ef00e229665a20025c5f7add8bd202f.png?trs=0e0a9d8b27f1e5c927184a23d130a717d31fec49db2c5d8dc4a692aeab825c69)
