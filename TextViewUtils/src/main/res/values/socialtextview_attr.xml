@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SocialTextView">
+        <!-- set hashtag color default is  #00B0FF -->
+        <attr name="hashColor" format="color"/>
+        <!-- set mention color default is  #FF3D00 -->
+        <attr name="mentionColor" format="color"/>
+
+        <!-- set tag type Mention or Hash and Both default value is ALL  -->
+        <attr name="tagType">
+            <flag name="none" value="0"/>
+            <flag name="hash" value="1"/>
+            <flag name="mention" value="2"/>
+            <flag name="all" value="3"/>
+        </attr>
+
+        <!-- set hash highlight color default is transparent you can update it to res color   -->
+        <attr name="highlightColor" format="color"/>
+
+        <!-- set if hash text bold or not default is false   -->
+        <attr name="boldHashText" format="boolean"/>
+        <!-- set if mention text bold or not default is false   -->
+        <attr name="boldMentionText" format="boolean"/>
+    </declare-styleable>
+</resources>
