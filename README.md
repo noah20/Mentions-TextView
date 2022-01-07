@@ -1,7 +1,6 @@
-# Mentions-TextView
-mentions and tags textview
-
 # Mentions Textview
+
+[![](https://jitpack.io/v/noah20/mentions-textview.svg)](https://jitpack.io/#noah20/mentions-textview)
 
 Make Mentions and hashtags clickable in Textview
 
