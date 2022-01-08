@@ -6,6 +6,7 @@
     android:background="#605C5C"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <com.sol.textviewutils.SocialTextView
         android:id="@+id/socialTextView"
         android:layout_width="match_parent"
@@ -13,10 +14,10 @@
         android:text="hello #world from @Home"
         android:padding="7dp"
         android:textColor="#DDD5D5"
+        app:boldMentionText="true"
+        app:boldHashText="true"
         app:hashColor="#80D8FF"
         app:mentionColor="#FF8A80"
         app:tagType="hash|mention" />
-
-
 
 </FrameLayout>

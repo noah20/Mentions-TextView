@@ -9,9 +9,7 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.util.AttributeSet
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.text.clearSpans
 import java.util.regex.Matcher
@@ -103,7 +101,6 @@ class SocialTextView : AppCompatTextView, OnViewClick, View.OnClickListener {
     private fun findHash(spannable: SpannableString) {
         val matcher: Matcher = hashPattern.matcher(spannable)
         _hashList = ArrayList()
-        _mentionList = ArrayList()
 
         while (matcher.find()) {
             val hash = matcher.group()
@@ -130,8 +127,10 @@ class SocialTextView : AppCompatTextView, OnViewClick, View.OnClickListener {
 
     private fun findMention(spannable: SpannableString) {
         val matcher: Matcher = mentionPattern.matcher(spannable)
+        _mentionList = ArrayList()
         while (matcher.find()) {
             val hash = matcher.group()
+            _mentionList.add(hash)
             val click = object : ClickableSpan() {
                 override fun onClick(widget: View) {
                     _preventClick = true
@@ -173,14 +172,8 @@ class SocialTextView : AppCompatTextView, OnViewClick, View.OnClickListener {
         super.setOnClickListener(this)
     }
 
-    override fun onHashClick(tag: String) {
-
-    }
-
-    override fun onMentionClick(mention: String) {
-
-    }
-
+    override fun onHashClick(tag: String) {}
+    override fun onMentionClick(mention: String) {}
 
     override fun onClick(v: View?) {
         if (_preventClick)

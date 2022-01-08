@@ -1,6 +1,8 @@
 package com.sol.mentionsandtags
 
 import android.graphics.Color
+import android.graphics.Color.RED
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,13 +10,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sol.mentionsandtags.databinding.SocialtextviewBinding
 import com.sol.textviewutils.OnViewClick
 
+private const val TAG = "TextAdapter"
+
 class TextAdapter(private val textSamples:List<String>, val callback: OnViewClick, val onClick: View.OnClickListener):
     RecyclerView.Adapter<TextAdapter.TextViewHolder>() {
 
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextViewHolder {
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextViewHolder{
         return TextViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.socialtextview,parent,false)
         )
@@ -33,6 +36,9 @@ class TextAdapter(private val textSamples:List<String>, val callback: OnViewClic
             holder.binding.socialTextView.mentionColor = Color.parseColor("#FF8A80")
             holder.binding.socialTextView.hashColor  = Color.parseColor("#80D8FF")
         }
+
+        Log.d(TAG, "onBindViewHolder: noah mention list : ${holder.binding.socialTextView.getMentionList()}")
+        Log.d(TAG, "onBindViewHolder: noah hash list : ${holder.binding.socialTextView.getHashList()}")
     }
 
     override fun getItemCount(): Int {

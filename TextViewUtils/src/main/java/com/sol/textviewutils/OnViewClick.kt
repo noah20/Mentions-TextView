@@ -2,7 +2,7 @@ package com.sol.textviewutils
 
 import java.util.regex.Pattern
 
-interface OnViewClick {
+ interface OnViewClick {
     val hashPattern: Pattern
         get() = Pattern.compile("#\\w+")
     val mentionPattern:Pattern
