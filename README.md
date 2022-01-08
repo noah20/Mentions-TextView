@@ -20,7 +20,7 @@ allprojects {
 Step 2. Add the dependency
 ``` gradle 
 dependencies {
-	implementation 'com.github.noah20:mentions-textview:1.0.1'
+	implementation 'com.github.noah20:mentions-textview:last_version'
 }
 
 ```
